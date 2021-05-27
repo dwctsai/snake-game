@@ -6,6 +6,10 @@ FONT = ("Courier", 24, "normal")
 
 
 class Scoreboard(Turtle):
+    """
+    A class used to draw the game score.
+    """
+
     def __init__(self):
         super().__init__()
         self.score = 0
@@ -19,6 +23,9 @@ class Scoreboard(Turtle):
         self.update_scoreboard()
 
     def update_scoreboard(self):
+        """
+        Update the scoreboard with the latest score and high score.
+        """
         self.clear()
         self.write(f"Score: {self.score}  High Score: {self.high_score}", align=ALIGNMENT, font=FONT)
 
@@ -27,6 +34,10 @@ class Scoreboard(Turtle):
     #     self.write(f"GAME OVER", align=ALIGNMENT, font=FONT)
 
     def reset(self):
+        """
+        Reset the scoreboard to a score of 0.
+        Before resetting, write the latest high score to "data.txt".
+        """
         if self.score > self.high_score:
             self.high_score = self.score
             with open("data.txt", mode="w") as data:
@@ -36,5 +47,8 @@ class Scoreboard(Turtle):
         self.update_scoreboard()
 
     def increase_score(self):
+        """
+        Update the score by 1 point.
+        """
         self.score += 1
         self.update_scoreboard()

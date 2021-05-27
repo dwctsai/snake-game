@@ -11,6 +11,9 @@ RIGHT = 0
 
 
 class Snake:
+    """
+    A class used to represent the Snake that the player controls.
+    """
 
     def __init__(self):
         self.segments = []

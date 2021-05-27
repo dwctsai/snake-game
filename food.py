@@ -3,6 +3,9 @@ import random
 
 
 class Food(Turtle):
+    """
+    A class used to represent a Food item, a white pellet for Snakes to eat.
+    """
 
     def __init__(self):
         super().__init__()
@@ -16,6 +19,9 @@ class Food(Turtle):
         self.refresh()
 
     def refresh(self):
+        """
+        Create and spawn a Food item in a random location.
+        """
         random_x = random.randint(-280, 280)
         random_y = random.randint(-280, 280)
         self.goto(random_x, random_y)
