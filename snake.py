@@ -3,11 +3,7 @@ from turtle import Turtle
 
 # Constants
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
-MOVE_DISTANCE = 20
-UP = 90
-DOWN = 270
-LEFT = 180
-RIGHT = 0
+MOVE_DISTANCE,UP,DOWN,LEFT,RIGHT = 20,90,270,180,0
 
 
 class Snake:
